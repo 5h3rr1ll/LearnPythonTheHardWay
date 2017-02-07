@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Würfel</title>
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user=scalable=no" />
+		<meta charset="UTF-8">
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script >
+		<script type="text/javascript" >
+		$(document).ready(function(){
+		$(".menubutton").click(function(){
+		$("nav").slideToggle("slow");
+		});
+	});
+		</script>
+	</head>
+	<body>
+		<!--css style-->
+		<style>
+			.cube.format{color: white; font-size:30px;}
+
+			.cube{
+
+					height:250px; width:250px;
+					-webkit-transition: transform 3s;
+					-webkit-transform-style: preserve-3d;
+					transition: transform 3s;
+					transform-style: preserve-3d;
+					float: left;
+			}
+
+
+				.cube:hover{
+					transform: rotateX(90deg);
+			}
+
+			.side_a{
+					height: 250px; width: 250px;
+					background-color: #194a70;
+					-webkit-transform: translateZ(80px);
+					transform: translateZ(80px);
+					float: left;
+					margin-bottom: -45px;
+					text-align: center;
+			}
+
+			.side_b{
+			        height: 250px; width: 250px;
+					background-color:#2774dc;
+					-webkit-transform: rotateX(-90deg)translateZ(-80px);
+					transform: rotateX(-90deg)translateZ(-80px);
+					float: left;
+					text-align: center;
+			}
+		</style>
+		<!--css style-->
+
+		<div class="cube format">
+			<div class="side_a"><p>Hallo Dan!</p></div>
+			<div class="side_b"><p>Gut gemacht! ;-)</p></div>
+
+		</div>
+	</body>
+</html>
